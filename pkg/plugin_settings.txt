@@ -1,0 +1,6 @@
+name=XenServer Monitor
+version=1.1
+platforms=windows linux solaris
+description=Monitor the performance & health of XenServer
+restartCore=false
+requiresAgentScript=false
