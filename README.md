@@ -1,5 +1,5 @@
-# Cisco XenServer Monitor
-## Tags : plugin   cisco   xenserver  
+# Composite (Aggregate) Monitor (uptime 5.x)
+## Tags : plugin   aggregate   deprecated  
 
 ## Category: plugin
 
@@ -7,38 +7,38 @@
 
 
   
-    * Cisco XenServer Monitor 1.1 - 7.2, 7.1, 7.0, 6.0, 5.5, 5.4, 5.3, 5.2
+    * Composite (Aggregate) Monitor (uptime 5.x) 1.1 - 5.5, 5.4, 5.3, 5.2
   
 
 
-### Description: This plugin uses the XenServer Management API and XAPI RRD to gather performance and health metrics for XenServer.
+### Description: Check the status of other monitors to determine the aggregated state of an application (or component).
+Example: trigger an alert or outage if more than 3 HTTP monitors are down (in a WARN/CRIT state) in a web cluster.
+Note: This functionality is now built in up.time 6+! Just add a new Application (in My Infrastructure) to aggregate multiple monitors.
 
-### Supported Monitoring Stations: 7.2, 7.1, 7.0, 6.0, 5.5, 5.4, 5.3.x Windows, 5.3.x Linux/Solaris, 5.3, 5.2
+### Supported Monitoring Stations: 5.5, 5.4, 5.3, 5.2
 ### Supported Agents: None; no agent required
 ### Installation Notes: <ol>
-<li><p>Install this plugin with the Plugin Manager</p></li>
-<li><p>This plugin requires Python. Install Python if the OS of your Monitoring Station does not already have it.</p></li>
-<li><p>Copy the following Python modules to your Python library directory:</p></li>
+<li>Place jar file(s) in "(uptime_dir)/core" directory</li>
 </ol>
 
 
-<p>/scripts/MonitorXenServer/XenAPI.py
-/scripts/MonitorXenServer/parse_rrd.py</p>
+<p>If on Linux/Solaris (extra step):
+- edit the /uptime.lax file and add the new jar files to the line that starts with:
+lax.class.path=...</p>
 
-<p>The Python library path might be different depending on the OS.
-On Posix, the typical path is /usr/lib/pythonX.Y where X.Y is the version number.
-On Windows, the typical path is C:\Program Files\PythonX.Y.Z\Lib where X.Y.Z is the version number.</p>
+<p>Note: It will be a single long line even though it looks like it's on multiple lines. Make sure the new jar filenames are on the same line.</p>
 
 <ol>
-<li><p>Make certain the Python binary is in your PATH variable
-i.e. executing "python" on the command line works</p></li>
-<li><p>Add your XenServer as Virtual Nodes and add this monitor to your XenServer.</p></li>
+<li><p>Restart the up.time Data Collector (core) to load the monitor into memory.</p></li>
+<li><p>Place the xml file(s) in the uptime directory and run the following command(s) from the uptime directory:</p>
+
+<blockquote><p>scripts\erdcloader -x</p></blockquote></li>
 </ol>
 
 
-### Dependencies: <p>Python 2.7.x is required on the up.time Monitoring Station.</p>
+### Dependencies: <p>n/a</p>
 
-### Input Variables: * Username - username to login to the XenServer* Password - password for the user
-### Output Variables: * XenServer CPU Utilization (%)* XenServer Load Average* XenServer Memory Free (MB)* XenServer Memory Used (MB)* XenServer Memory Util (%)* Storage Repository Used (GB)* Storage Repository Free (GB)* Storage Repository Utilization (%)* Network Receive Rate (Kbps)* Network Send Rate (Kbps)
-### Languages Used: * Python
+### Input Variables: * Service monitor name(s)* Hostname(s)
+### Output Variables: * Monitors in OK State* Monitors in WARN State* Monitors in CRIT State
+### Languages Used: * Java
 
