@@ -7,13 +7,13 @@ See http://uptimesoftware.github.io for more information.
 
 ### Category
 
-{ page.category }}
+plugin
 
 ### Version Compatibility
 
 
   
-    * Cisco XenServer Monitor 1.1 - 7.2, 7.1, 7.0, 6.0, 5.5, 5.4, 5.3, 5.2
+* Cisco XenServer Monitor 1.1 - 7.2, 7.1, 7.0, 6.0, 5.5, 5.4, 5.3, 5.2
   
 
 
@@ -56,12 +56,37 @@ i.e. executing "python" on the command line works</p></li>
 
 
 ### Input Variables
-* Username - username to login to the XenServer* Password - password for the user
+
+* Username - username to login to the XenServer
+
+* Password - password for the user
+
 
 ### Output Variables
 
-* XenServer CPU Utilization (%)* XenServer Load Average* XenServer Memory Free (MB)* XenServer Memory Used (MB)* XenServer Memory Util (%)* Storage Repository Used (GB)* Storage Repository Free (GB)* Storage Repository Utilization (%)* Network Receive Rate (Kbps)* Network Send Rate (Kbps)
+
+* XenServer CPU Utilization (%)
+
+* XenServer Load Average
+
+* XenServer Memory Free (MB)
+
+* XenServer Memory Used (MB)
+
+* XenServer Memory Util (%)
+
+* Storage Repository Used (GB)
+
+* Storage Repository Free (GB)
+
+* Storage Repository Utilization (%)
+
+* Network Receive Rate (Kbps)
+
+* Network Send Rate (Kbps)
+
 
 ### Languages Used
+
 * Python
 
