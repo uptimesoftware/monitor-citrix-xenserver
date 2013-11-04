@@ -1,9 +1,9 @@
-# Cisco XenServer Monitor
+# Citrix XenServer Monitor
 
 See http://uptimesoftware.github.io for more information.
 
 ### Tags 
- plugin   cisco   xenserver  
+ plugin   citrix   xenserver  
 
 ### Category
 
@@ -13,7 +13,7 @@ plugin
 
 
   
-* Cisco XenServer Monitor 1.1 - 7.2, 7.1, 7.0, 6.0, 5.5, 5.4, 5.3, 5.2
+* Citrix XenServer Monitor 1.1 - 7.2, 7.1, 7.0, 6.0, 5.5, 5.4, 5.3, 5.2
   
 
 
