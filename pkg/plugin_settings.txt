@@ -1,6 +1,6 @@
 name=XenServer Monitor
 version=1.1
 platforms=windows linux solaris
-description=Monitor the performance & health of XenServer
+description=This plugin uses the XenServer Management API and XAPI RRD to gather performance and health metrics for XenServer.
 restartCore=false
 requiresAgentScript=false
