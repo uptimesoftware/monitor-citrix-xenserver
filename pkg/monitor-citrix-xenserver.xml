@@ -2,7 +2,7 @@
 <uptime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.uptimesoftware.com/erdc/erdc erdc" xmlns="http://www.uptimesoftware.com/erdc/erdc" xmlns:upt="http://www.uptimesoftware.com/erdc/erdc" version="4.0" target_grouping="other">
 	<class>XenServer</class>
 	<exec>com.uptimesoftware.uptime.erdc.MonitorCustomScriptRunner</exec>
-	<erdc_version>2.0</erdc_version>
+	<erdc_version>2.1</erdc_version>
 	<category>Applications - General</category>
 	<category_related></category_related>
 	<grid_info>
@@ -57,7 +57,7 @@
 			</gui_type>
 		</element>
 		
-		<element name='hostAvgCPUUtil' parameter_type='output' data_type='decimal' gui_basic='' range_type='0' units='proc'>
+		<element name='hostAvgCPUUtil' parameter_type='output' data_type='decimal' gui_basic='' range_type='0' units='%'>
 			<control_options>size:8</control_options>
 			<default_value></default_value>
 			<short_description>XenServer CPU Utilization (%)</short_description>
@@ -66,7 +66,7 @@
 			<error_message/>
 			<gui_type><decimal/></gui_type>
 		</element>
-		<element name='hostMemUsed' parameter_type='output' data_type='decimal' gui_basic='' range_type='0' units='proc'>
+		<element name='hostMemUsed' parameter_type='output' data_type='decimal' gui_basic='' range_type='0' units='MB'>
 			<control_options>size:8</control_options>
 			<default_value></default_value>
 			<short_description>XenServer Memory Used (MB)</short_description>
@@ -75,7 +75,7 @@
 			<error_message/>
 			<gui_type><decimal/></gui_type>
 		</element>
-		<element name='hostMemFree' parameter_type='output' data_type='decimal' gui_basic='' range_type='0' units='proc'>
+		<element name='hostMemFree' parameter_type='output' data_type='decimal' gui_basic='' range_type='0' units='MB'>
 			<control_options>size:8</control_options>
 			<default_value></default_value>
 			<short_description>XenServer Memory Free (MB)</short_description>
@@ -84,7 +84,7 @@
 			<error_message/>
 			<gui_type><decimal/></gui_type>
 		</element>
-		<element name='hostMemPct' parameter_type='output' data_type='decimal' gui_basic='' range_type='0' units='proc'>
+		<element name='hostMemPct' parameter_type='output' data_type='decimal' gui_basic='' range_type='0' units='%'>
 			<control_options>size:8</control_options>
 			<default_value></default_value>
 			<short_description>XenServer Memory Util (%)</short_description>
@@ -93,7 +93,7 @@
 			<error_message/>
 			<gui_type><decimal/></gui_type>
 		</element>
-		<element name='loadAvg' parameter_type='output' data_type='decimal' gui_basic='' range_type='0' units='proc'>
+		<element name='loadAvg' parameter_type='output' data_type='decimal' gui_basic='' range_type='0' units=''>
 			<control_options>size:8</control_options>
 			<default_value></default_value>
 			<short_description>XenServer Load Average</short_description>

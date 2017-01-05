@@ -216,7 +216,7 @@ def main():
 		for cpu in session.xenapi.host.get_host_CPUs(host):			
 			cpu_sum = cpu_sum + session.xenapi.host_cpu.get_utilisation(cpu)
 			count = count + 1	
-		avgCPU = cpu_sum / count		
+		avgCPU = cpu_sum / count	
 		print "hostAvgCPUUtil %f" % avgCPU		
 		
 	# in megabyte (MB)
